@@ -1,0 +1,21 @@
+pipeline { 
+  agent any
+  
+  stages { 
+    stage('clone repository') {
+      steps { 
+        git 'https://github.com/EngTomno/GalleryDevOps1.git'
+      }
+    }
+    stage('Build the project') {
+      steps { 
+        echo 'Building the project'
+      }
+    }
+    stage('Tests') {
+      steps { 
+        echo 'Testing the project'
+      }
+    }
+  }
+}
